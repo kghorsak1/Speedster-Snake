@@ -1,0 +1,18 @@
+from snake import Snake, Food, Game
+from renderer import Renderer
+from input_handler import InputHandler
+
+def main():
+    snake = Snake(body=[(0, 0)], direction=(1, 0))
+    food = Food(position=(5, 5))
+    game = Game(snake=snake, food=food, score=0)
+    renderer = Renderer(game)
+    input_handler = InputHandler(game)
+
+    while True:
+        input_handler.handle_input()
+        game.update()
+        renderer.render()
+
+if __name__ == "__main__":
+    main()

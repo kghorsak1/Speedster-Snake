@@ -1,0 +1,7 @@
+class InputHandler:
+    def __init__(self, game):
+        self.game = game
+
+    def handle_input(self):
+        # Handle keyboard input and update the game state accordingly
+        pass
